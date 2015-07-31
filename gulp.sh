@@ -1,1 +1,1 @@
-cd gulp/ && gulp
+cd 00dev/gulp/ && gulp
