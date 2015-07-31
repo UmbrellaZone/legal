@@ -10,3 +10,9 @@ gulp = require('gulp')
 # import the gulp plugins
 gulpLoadPlugins = require('gulp-load-plugins')
 plugins = gulpLoadPlugins(rename: 'gulp-add-src': 'addsrc')
+
+
+
+gulp.task 'default', (cb) ->
+  plugins.sequence() cb
+  return
