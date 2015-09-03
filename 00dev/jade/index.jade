@@ -1,0 +1,26 @@
+html
+  head
+    title Imprint/Privacy Policy {{website.domain}}
+    meta(content=('Privacy Policy and Imprint for ' + {{website.domain}}), name='description')
+    style
+      //- we inline the style here so we do not rely on any third party files. The legal page MUST load!!!
+      //- so the less the better.
+      body {
+        
+      }
+      .topbar {
+        
+      }
+      .content {
+        
+      }
+  body
+    .topbar
+      .homeButton
+        | Home
+      .logo
+        img(src=website.logoPath)
+      .heading
+        | Imprint / Privacy Policy for {{website.domain}}
+    .content
+    .footer
