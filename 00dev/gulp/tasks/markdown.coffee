@@ -1,2 +1,1 @@
-module.exports = (file,enc,cb) ->
-    
+module.exports = (umbrella,gulp,plugins) ->
