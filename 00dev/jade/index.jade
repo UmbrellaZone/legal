@@ -7,11 +7,32 @@ html
 
   body
     .topbar
-      .homeButton
+      .umbrella.homeButton
         | Home
-      .logo
+      .umbrella.logo
         img(src=website.logoPath)
-      .heading
-        | Imprint / Privacy Policy for {{website.domain}}
-    .content
-    .footer
+      .umbrella.heading
+        | Imprint / Privacy Policy for {{legal.domain}}
+    .umbrella.content
+      .umbrella.heading Imprint for {{legal.domain}}
+      if legal.options.texts.twitter
+        #{legal.umbrella.texts.twitter}
+
+      if legal.options.texts.facebook
+        #{legal.umbrella.texts.facebook}
+
+      if legal.options.texts.gplus
+        #{legal.umbrella.texts.gplus}
+
+      if legal.options.texts.linkedin
+        #{legal.umbrella.texts.linkedin}
+
+      if legal.options.texts.adsense
+        #{legal.umbrella.texts.adsense}
+
+      if legal.options.texts.cookies
+        #{legal.umbrella.texts.cookies}
+
+      h2.umbrella Contact Information
+        #{legal.contact.}
+    .umbrella.footer
