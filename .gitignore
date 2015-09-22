@@ -1,0 +1,4 @@
+.settings/
+.idea/
+node_modules/
+00dev/bower/bower_components/
