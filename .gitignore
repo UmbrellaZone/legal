@@ -2,3 +2,5 @@
 .idea/
 node_modules/
 00dev/bower/bower_components/
+00dev/gulp/ts/**/*.js
+00dev/gulp/ts/**/*.js.map

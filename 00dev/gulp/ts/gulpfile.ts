@@ -1,21 +1,49 @@
-getTask = (task) ->
-  require('./tasks/' + task + '.coffee') umbrella, gulp, plugins
+/// <reference path="./typings/tsd.d.ts" />
+/// <reference path="./umbrella.gulp.plugins.ts" />
+/// <reference path="./umbrella.gulp.tasks.ts" />
+/// <reference path="./umbrella.gulp.config.ts" />
 
-getPlugin = (plugin) ->
-  return require('./plugins/' + plugin + '.coffee')
-  
-# import gulp
-gulp = require('gulp')
 
-# import the gulp plugins
-gulpLoadPlugins = require('gulp-load-plugins')
-plugins = gulpLoadPlugins(rename: 'gulp-add-src': 'addsrc')
+console.log("Starting the mojo.gulp build process...");
+console.log("require dev dependencies...");
 
-#import the umbrella config
-umbrella = require('./umbrella.gulp.config.js')
+/* --------------------------------------------------------------------------
+ ---------------------- init gulp and gulp plugins ---------------------------
+ -------------------------------------------------------------------------- */
+/**
+ * stores the reference to gulp
+ * @type {any}
+ */
+var gulp = require("gulp");
 
-gulp.task 'markdown', getTask('markdown')
+/**
+ * create var plugins in the right scope
+ */
+var plugins;
+GulpPlugins.init(); //is defined in umbrella.gulp.plugins.ts
+var umbrella = UmbrellaConfig.init();
 
-gulp.task 'default', (cb) ->
-  plugins.sequence('markdown') cb
-  return
+
+/* --------------------------------------------------------------------------
+ ---------------------- init Tasks -------------------------------------------
+ -------------------------------------------------------------------------- */
+
+/**
+ * initializes secondary gulp tasks
+ */
+GulpTasks.init();
+
+
+/* --------------------------------------------------------------------------
+ ---------------------- watch for changes ------------------------------------
+ -------------------------------------------------------------------------- */
+gulp.task("watch", () => {
+
+});
+
+/**
+ * gulp task that defines the the default chain of tasks perfeormed by mojoio framework
+ */
+gulp.task("default", (cb) => {
+    plugins.sequence("environment", ["ts", "sass"], "blog", "jade", ["sitemap", "robots"], "serve", "watch")(cb);
+});
