@@ -1,7 +1,7 @@
 /// <reference path="../typings/tsd.d.ts" />
 module.exports = (umbrella, gulp, plugins) => () => {
-    var stream = gulp.src(umbrella.path.pagebase + "page.jade/*.jade")
+    var stream = gulp.src(umbrella.path.jadebase + "*.jade")
         .pipe(plugins.plumber())
-        .pipe(gulp.dest(umbrella.path.buildbase));
+        .pipe(gulp.dest(umbrella.path.buildbase + 'jade/'));
     return stream;
 };
