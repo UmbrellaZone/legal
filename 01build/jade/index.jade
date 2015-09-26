@@ -1,0 +1,59 @@
+html
+  head
+    title Imprint/Privacy Policy {{website.domain}}
+    meta(content=('Privacy Policy and Imprint for ' + {{legal.domain}}), name='description')
+    style.
+      != legal.style
+
+  body
+    .topbar
+      .umbrella.homeButton
+        | Home
+      .umbrella.logo
+        img(src=website.logoPath)
+      .umbrella.heading
+        | Imprint / Privacy Policy for {{legal.domain}}
+    .umbrella.content
+      .umbrella.heading Imprint for {{legal.domain}}
+      if legal.options.texts.twitter
+        #{legal.umbrella.texts.twitter}
+
+      if legal.options.texts.facebook
+        #{legal.umbrella.texts.facebook}
+
+      if legal.options.texts.gplus
+        #{legal.umbrella.texts.gplus}
+
+      if legal.options.texts.linkedin
+        #{legal.umbrella.texts.linkedin}
+
+      if legal.options.texts.adsense
+        #{legal.umbrella.texts.adsense}
+
+      if legal.options.texts.cookies
+        #{legal.umbrella.texts.cookies}
+
+      h2.umbrella Contact Information
+        #{legal.contact.}
+    .umbrella.footer
+      footer.page-footer
+        .container
+          .row
+            .col.l6.s12
+              h5.white-text Footer Content
+              p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+            .col.l4.offset-l2.s12
+              h5.white-text Links
+              ul
+                li
+                  a.grey-text.text-lighten-3(href='#!') Link 1
+                li
+                  a.grey-text.text-lighten-3(href='#!') Link 2
+                li
+                  a.grey-text.text-lighten-3(href='#!') Link 3
+                li
+                  a.grey-text.text-lighten-3(href='#!') Link 4
+        .footer-copyright
+          .container
+            | © 2014 Copyright Text
+            a.grey-text.text-lighten-4.right(href='#!') More Links

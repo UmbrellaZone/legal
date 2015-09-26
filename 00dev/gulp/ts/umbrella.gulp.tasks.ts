@@ -6,10 +6,11 @@ module GulpTasks {
      * @returns {any}
      */
     var getTask = function(task:string) {
-        return require("./gulp.tasks/" + task + ".js")(mojo, gulp, plugins);
+        return require("./gulp.tasks/" + task + ".js")(umbrella, gulp, plugins);
     }
 
     export function init() {
         gulp.task("sass", getTask("sass"));
+        gulp.task("jade",getTask("jade"));
     }
 }

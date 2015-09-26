@@ -19,6 +19,7 @@ module GulpPlugins {
         plugins.mail = require("mailgun-send");
         plugins.mergeStream = require("merge-stream");
         plugins.path = require("path");
+        plugins.pushrocks = require("pushrocks");
         plugins.reload = require("require-reload");
         plugins.remotefile = require("remotefile");
         plugins.sassDoc = require("sassdoc");
@@ -30,9 +31,6 @@ module GulpPlugins {
         }
 
         //import custom plugins (not npm managed)
-        plugins.buildBlogMeta = getPlugin("buildblogmeta");
-        plugins.checkManifest = getPlugin("checkmanifest");
-        plugins.preProBlogJson = getPlugin("preproblogjson");
-        plugins.mojoPreProJade = getPlugin("mojoPreProJade");
+        // ***nothing here so far***
     }
 }

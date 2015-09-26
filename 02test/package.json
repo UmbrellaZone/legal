@@ -1,0 +1,29 @@
+{
+  "name": "umbrella-legal-test",
+  "version": "0.0.1",
+  "description": "umbrella.legal test",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umbrellazone/umbrella-legal.git"
+  },
+  "keywords": [
+    "json",
+    "jade",
+    "template"
+  ],
+  "author": "Smart Coordination GmbH <office@umbrella.zone> (https://umbrella.zone)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/umbrellazone/umbrella-legal/issues"
+  },
+  "homepage": "https://github.com/umbrellazone/umbrella-legal",
+  "dependencies": {
+    "gulp":"latest",
+    "gulp-umbrella":"latest"
+  }
+}
+
