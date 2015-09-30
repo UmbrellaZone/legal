@@ -1,6 +1,7 @@
 // import gulp
-var gulp = require("gulp"),
-		gulpTypescript = require("gulp-typescript");
+var gulp = require("gulp");
+var gulpTypescript = require("gulp-typescript");
+var pr = require("pushrocks");
 
 gulp.task('tsGulpFile', function() {
 	var stream = gulp.src('../gulpfile.ts')
@@ -28,11 +29,11 @@ gulp.task('tsGulpPlugins', function() {
 });
 
 gulp.task('tsToJsOnly',['tsGulpFile','tsGulpPlugins','tsGulpTasks'], function() {
-	console.log('Typescript for Gulp compiled');
+	pr.beautylog.success('Typescript for Gulp compiled');
 });
 
 gulp.task('default',['tsGulpFile','tsGulpPlugins','tsGulpTasks'], function() {
-	console.log('Typescript for Gulp compiled');
-	console.log('Now running main gulpfile');
+	pr.beautylog.success('Typescript for Gulp compiled');
+	pr.beautylog.log('Now running main gulpfile');
 	var jsGulpFile = require('../../js/gulpfile.js');
 });
