@@ -1,7 +1,7 @@
 /// <reference path="./gulpfile.ts" />
 module GulpPlugins {
     export function init() {
-        gulpLoadPlugins = require("gulp-load-plugins");
+        var gulpLoadPlugins = require("gulp-load-plugins");
         plugins = gulpLoadPlugins({
             rename: {
                 "gulp-add-src": "addsrc",
@@ -24,6 +24,7 @@ module GulpPlugins {
         plugins.remotefile = require("remotefile");
         plugins.sassDoc = require("sassdoc");
         plugins.sassConvert = require("sass-convert");
+        plugins.makeJson = require("gulp-makejson");
 
         //getPlugin function for non npm plugins (distributed with mojo)
         var getPlugin = function(plugin:string) {
