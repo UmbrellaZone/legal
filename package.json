@@ -1,6 +1,6 @@
 {
   "name": "umbrella.legal-source",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Legal Docs for use in automated workflows",
   "main": "server.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "(cd 00dev/gulp/ts/compile && gulp)",
-    "reinstall":"(rm -r node_modules && npm install)"
+    "reinstall": "(rm -r node_modules && npm install)"
   },
   "author": "Smart Coordination GmbH <office@smart-coordination.com>",
   "dependencies": {},
