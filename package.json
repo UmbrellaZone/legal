@@ -46,7 +46,7 @@
     "gulp-sitemap": "^2.2.0",
     "gulp-typescript": "^2.8.1",
     "gulp-uglify": "^1.2.0",
-    "gulp-umbrella": "latest",
+    "gulp-umbrella": "1.0.6",
     "gulp-util": "^3.0.6",
     "jade": "^1.11.0",
     "jade-doc": "0.0.9",
