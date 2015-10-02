@@ -1,6 +1,6 @@
 {
   "name": "umbrella.legal-source",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Legal Docs for use in automated workflows",
   "main": "server.js",
   "license": "MIT",
