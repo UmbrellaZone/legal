@@ -1,0 +1,19 @@
+language: node_js
+before_install:
+- nvm install stable
+- node -v
+- npm -v
+- npm install -g gulp
+- npm install gulp
+- npm install gulp-typescript
+deploy:
+  provider: npm
+  email: npm@smart-coordination.com
+  api_key:
+    secure: EH/R+jGArjQVT4c1iWzjsoe77Jp7xufEFupO/zgkP6lVFFU/GYiaAgrNn3YY7h6zsdFnaqlFCOk1+/rezMr+a9upDZC2ymivXmAHQtJj9R5n+P83j/4yheDndPp5LTdRwBEYu5kWn5b0m03LEBM79S1Abqk6z7bNbLIwek44KcH3mJG18ycI8/cF6SEAefMvB2nbAj3ttTjRb3Sz7h4L3xfOw2lgdJEyoSkxxBbhfyZQ8ob7Ie4c8r6w32EXeZWuD+5vZ8kTZ0R/64Rh7ER+6IFoicaTsmKZrnGFiEVp7EjGRFbZ92j/+Wr2yViW+f00ZEUvQgOQI9L0fMYBarLKYQ30L0yaEOgYoypW+hEgaQdjlNNKYGdBr0uG1nRLidTljLQnguovmtVQg9p24pD5OB94oQj1qtWOZmJ7YDLH0TAWl5wky3nkzt9jMJ91xK+w00BV+Zadq/oZ3iVDmvaaUMH7KYqNHLOQGeN/C2E905i9TuiN1vZJAzBtg6Le4ER0C2fKeyL4cT9+rDEVHEI1EjW/Iz0ppbwi1RE8fGMuX1phAsmkDjGBTjQHY9Dsl5cHU0gKALcXoMnEnzcPCjH1Z0TNhhGwYSOxnHnwsaTf2k5wIQBuYRTAVh1atl2/0gTDjP9VJhPNICG+xL6ZZvOB957ZCj3d3PLGkGis9lre1F4=
+  on:
+    tags: true
+    repo: UmbrellaZone/umbrella-legal
+notifications:
+  slack:
+    secure: oM8yCioyO48J/6mLxZxn6UhGw0AcV6FJbPoSUfrXtFIB6/CyuUROoUx4KbDyaECzQfmPcISfms5q8KV3a9/k3qZNAK4HFD8Jbd0Hk1e/XdMJNQ8skF1pOiK/LKnydBaULx4EtXUaPx0d75V9+gvYZmQOJHUbeQci1Xl45zJGW8kQqxDLA3GnW/BzcxIIqexmtLTi6Aw0YpYOfv+pjgHovUuzeVG/y/5B46YCui/3N+Og+i4Ka8pU84c0B/D5O3PqfwfwD3RU5dwdLp+8xCF+HgW6X1dXKbH7EWJUG62MHTMAvmr20+rUGGNIoX2mZyrtnDvayFh4LjbSR5ifMUpl8DXDOF2iGoyTd+97KGtMJNEvmkQdN/44m5Vd+ov+kNOOx5ZldmcGWBZwi8dGigAZ3h1q9FVqfKsd3ZtRgCvikMwFhbXLipeuTKRpNC35Zg6Fdi56UfI36ueR59Aa0CCB54QRcrZqaiG7xNU7vjWbqUJAuFwXH7JtGvZRVhrW2nGXBQ/x7tsCkdol4Ci+wXXXmb8nB3UtjqoCQITjs4chHuP//Fv+KDL9IhEsNNF8czrs3BKbcITBuIcEE1VgXfoMdO8LzcFFwWJOQ8J7d68Dll+3mth/8jmwTt2kxX1Gbin5NzeYKLz0OP9I3aBhhTX6VrKbcbdUHX3kqay8BTl9Q+s=
