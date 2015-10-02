@@ -12,5 +12,6 @@ module GulpTasks {
     export function init() {
         gulp.task("sass", getTask("sass"));
         gulp.task("jade",getTask("jade"));
+        gulp.task("text",getTask("text"));
     }
 }

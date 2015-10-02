@@ -4,6 +4,7 @@ module GulpPlugins {
         var gulpLoadPlugins = require("gulp-load-plugins");
         plugins = gulpLoadPlugins({
             rename: {
+                "gulp-front-matter": "frontMatter",
                 "gulp-add-src": "addsrc",
                 "gulp-markdown-to-json": "markdownToJson",
                 "gulp-remote-src": "remoteSrc"
@@ -13,7 +14,6 @@ module GulpPlugins {
         // now add more plugins non gulp plugins to the plugins object
         plugins.browserSync = require("browser-sync");
         plugins.color = require("colors");
-        plugins.frontMatter = require("front-matter");
         plugins.fs = require("fs");
         plugins.jadeDoc = require("jade-doc");
         plugins.mail = require("mailgun-send");
@@ -21,10 +21,8 @@ module GulpPlugins {
         plugins.path = require("path");
         plugins.pushrocks = require("pushrocks");
         plugins.reload = require("require-reload");
-        plugins.remotefile = require("remotefile");
         plugins.sassDoc = require("sassdoc");
         plugins.sassConvert = require("sass-convert");
-        plugins.makeJson = require("gulp-makejson");
 
         //getPlugin function for non npm plugins (distributed with mojo)
         var getPlugin = function(plugin:string) {

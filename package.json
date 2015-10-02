@@ -8,18 +8,23 @@
     "type": "git",
     "url": "git://github.com/UmbrellaZone/legaldocs.git"
   },
+  "scripts": {
+    "test": "(cd 00dev/gulp/ts/compile && gulp)",
+    "reinstall":"(rm -r node_modules && npm install)"
+  },
   "author": "Smart Coordination GmbH <office@smart-coordination.com>",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.8.2",
     "colors": "latest",
-    "front-matter": "^1.0.0",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
     "gulp-callfunction": "latest",
     "gulp-concat": "^2.6.0",
     "gulp-data": "^1.2.0",
     "gulp-debug": "^2.1.0",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-html2jade": "^1.1.1",
     "gulp-ignore": "^1.2.1",
     "gulp-indent": "^1.0.1",
     "gulp-insert": "^0.5.0",
@@ -27,6 +32,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-jsonjade": "latest",
     "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-makejson": "latest",
     "gulp-markdown": "^1.0.0",
     "gulp-markdown-to-json": "^0.2.1",
     "gulp-plumber": "^1.0.1",

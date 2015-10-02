@@ -45,5 +45,5 @@ gulp.task("watch", () => {
  * gulp task that defines the the default chain of tasks perfeormed by mojoio framework
  */
 gulp.task("default", (cb) => {
-    plugins.sequence("jade")(cb);
+    plugins.sequence("jade","text")(cb);
 });

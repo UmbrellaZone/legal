@@ -2,9 +2,10 @@
 var GulpPlugins;
 (function (GulpPlugins) {
     function init() {
-        gulpLoadPlugins = require("gulp-load-plugins");
+        var gulpLoadPlugins = require("gulp-load-plugins");
         plugins = gulpLoadPlugins({
             rename: {
+                "gulp-front-matter": "frontMatter",
                 "gulp-add-src": "addsrc",
                 "gulp-markdown-to-json": "markdownToJson",
                 "gulp-remote-src": "remoteSrc"
@@ -13,7 +14,6 @@ var GulpPlugins;
         // now add more plugins non gulp plugins to the plugins object
         plugins.browserSync = require("browser-sync");
         plugins.color = require("colors");
-        plugins.frontMatter = require("front-matter");
         plugins.fs = require("fs");
         plugins.jadeDoc = require("jade-doc");
         plugins.mail = require("mailgun-send");
@@ -21,7 +21,6 @@ var GulpPlugins;
         plugins.path = require("path");
         plugins.pushrocks = require("pushrocks");
         plugins.reload = require("require-reload");
-        plugins.remotefile = require("remotefile");
         plugins.sassDoc = require("sassdoc");
         plugins.sassConvert = require("sass-convert");
         //getPlugin function for non npm plugins (distributed with mojo)
@@ -47,6 +46,7 @@ var GulpTasks;
     function init() {
         gulp.task("sass", getTask("sass"));
         gulp.task("jade", getTask("jade"));
+        gulp.task("text", getTask("text"));
     }
     GulpTasks.init = init;
 })(GulpTasks || (GulpTasks = {}));
@@ -105,5 +105,5 @@ gulp.task("watch", function () {
  * gulp task that defines the the default chain of tasks perfeormed by mojoio framework
  */
 gulp.task("default", function (cb) {
-    plugins.sequence("jade")(cb);
+    plugins.sequence("jade", "text")(cb);
 });
