@@ -53,7 +53,7 @@
     "mailgun-send": "0.0.3",
     "marked": "^0.3.5",
     "merge-stream": "^1.0.0",
-    "pushrocks": "1.0.5",
+    "pushrocks": "1.0.6",
     "request": "^2.60.0",
     "require-dir": "^0.3.0",
     "require-reload": "^0.2.2",
