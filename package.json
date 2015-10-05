@@ -16,7 +16,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.8.2",
-    "colors": "latest",
+    "colors": "1.1.2",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
     "gulp-callfunction": "latest",
