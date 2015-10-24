@@ -32,7 +32,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-jsonjade": "latest",
     "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-makejson": "0.0.10",
+    "gulp-makejson": "0.0.13",
     "gulp-markdown": "^1.0.0",
     "gulp-markdown-to-json": "^0.2.1",
     "gulp-plumber": "^1.0.1",
