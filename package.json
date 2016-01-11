@@ -59,7 +59,6 @@
     "require-reload": "^0.2.2",
     "robots-generator": "^1.2.8",
     "sass-convert": "^0.5.2",
-    "sassdoc": "^2.1.15",
     "through2": "^2.0.0"
   }
 }
