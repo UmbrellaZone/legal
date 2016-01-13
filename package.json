@@ -9,7 +9,7 @@
     "url": "git://github.com/UmbrellaZone/legaldocs.git"
   },
   "scripts": {
-    "test": "(cd 00dev/gulp/ts/compile && gulp)",
+    "test": "(cd 00dev/gulp/ts/compile && node compile.js)",
     "reinstall": "(rm -r node_modules && npm install)"
   },
   "author": "Smart Coordination GmbH <office@smart-coordination.com>",

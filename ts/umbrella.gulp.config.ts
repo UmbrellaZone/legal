@@ -1,4 +1,4 @@
-/// <reference path="./gulpfile.ts"/>
+/// <reference path="./index.ts"/>
 var pr = require("pushrocks");
 module UmbrellaConfig {
     var umbrella:any = {};

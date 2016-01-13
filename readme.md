@@ -1,4 +1,4 @@
-# umbrella.zone legaldocs
+# umbrella-legal
 This repo contains files that are intended to be used in automated workflows like gulp or grunt.
 
 ### Buildstatus/Dependencies

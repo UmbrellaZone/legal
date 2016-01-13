@@ -1,4 +1,4 @@
-/// <reference path="./gulpfile.ts" />
+/// <reference path="./index.ts" />
 module GulpPlugins {
     export function init() {
         var gulpLoadPlugins = require("gulp-load-plugins");

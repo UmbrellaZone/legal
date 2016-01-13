@@ -1,4 +1,4 @@
-/// <reference path="./gulpfile.ts" />
+/// <reference path="./index.ts" />
 module GulpTasks {
     /**
      * loads a task from directory gulp.tasks
