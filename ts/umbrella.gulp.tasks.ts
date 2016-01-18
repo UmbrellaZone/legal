@@ -1,17 +1,28 @@
 /// <reference path="./index.ts" />
 module GulpTasks {
-    /**
-     * loads a task from directory gulp.tasks
-     * @param task is a string that names the task
-     * @returns {any}
-     */
-    var getTask = function(task:string) {
-        return require("./gulp.tasks/" + task + ".js")(umbrella, gulp, plugins);
-    }
-
     export function init() {
-        gulp.task("sass", getTask("sass"));
-        gulp.task("jade",getTask("jade"));
-        gulp.task("text",getTask("text"));
+        /**
+         * Sass Task
+         */
+        gulp.task("sass", function(){
+
+        });
+
+        /**
+         * Jade Task
+         */
+        gulp.task("jade", function(){
+            var stream = gulp.src(config.paths.jadeBase + "*.jade")
+                .pipe(plugins.plumber())
+                .pipe(gulp.dest(config.paths.buildBase + 'jade/'));
+            return stream;
+        });
+
+        /**
+         * Text Task
+         */
+        gulp.task("text", function(){
+
+        });
     }
 }

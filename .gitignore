@@ -1,5 +1,6 @@
 .settings/
 .idea/
+temp/
 node_modules/
 ts/**/*.js
 ts/**/*.js.map

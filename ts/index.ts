@@ -1,41 +1,18 @@
 /// <reference path="./typings/tsd.d.ts" />
 /// <reference path="./umbrella.gulp.plugins.ts" />
+/// <reference path="./umbrella.config.ts" />
 /// <reference path="./umbrella.gulp.tasks.ts" />
-/// <reference path="./umbrella.gulp.config.ts" />
 
-
-console.log("Starting the mojo.gulp build process...");
-console.log("require dev dependencies...");
-
-/* --------------------------------------------------------------------------
- ---------------------- init gulp and gulp plugins ---------------------------
- -------------------------------------------------------------------------- */
-/**
- * stores the reference to gulp
- * @type {any}
- */
 var gulp = require("gulp");
-
-/**
- * create var plugins in the right scope
- */
-var plugins;
-GulpPlugins.init(); //is defined in umbrella.gulp.plugins.ts
-var umbrella = UmbrellaConfig.init();
+var plugins = GulpPlugins.init(); //is defined in umbrella.gulp.plugins.ts
+var config = UmbrellaConfig.init();
 
 
 /* --------------------------------------------------------------------------
- ---------------------- init Tasks -------------------------------------------
+ ---------------------- run Tasks -------------------------------------------
  -------------------------------------------------------------------------- */
-
-/**
- * initializes secondary gulp tasks
- */
 GulpTasks.init();
-
-/**
- * gulp task that defines the the default chain of tasks perfeormed by mojoio framework
- */
-gulp.task("default", (cb) => {
+gulp.task("default", function(cb){
     plugins.sequence("jade","text")(cb);
 });
+gulp.start.apply(gulp, ['default']);
