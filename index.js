@@ -1,22 +1,25 @@
+#!/usr/bin/env node
+
 /// <reference path="./index.ts" />
 var GulpPlugins;
 (function (GulpPlugins) {
     function init() {
         var gulpLoadPlugins = require("gulp-load-plugins");
-        var plugins = gulpLoadPlugins({
-            rename: {
-                "gulp-front-matter": "frontMatter",
-                "gulp-add-src": "addsrc",
-                "gulp-markdown-to-json": "markdownToJson",
-                "gulp-remote-src": "remoteSrc"
-            }
-        });
-        // now add more plugins non gulp plugins to the plugins object
-        plugins.browserSync = require("browser-sync");
-        plugins.color = require("colors");
-        plugins.fs = require("fs-extra");
-        plugins.path = require("path");
-        plugins.pushrocks = require("pushrocks");
+        var plugins = {
+            beautylog: require("beautylog"),
+            g: gulpLoadPlugins({
+                rename: {
+                    "gulp-front-matter": "frontMatter",
+                    "gulp-add-src": "addsrc",
+                    "gulp-markdown-to-json": "markdownToJson",
+                    "gulp-remote-src": "remoteSrc"
+                }
+            }),
+            gulp: require("gulp"),
+            fs: require("fs-extra"),
+            path: require("path"),
+            remotezip: require("remotezip")
+        };
         return plugins;
     }
     GulpPlugins.init = init;
@@ -31,27 +34,52 @@ var UmbrellaConfig;
     };
 })(UmbrellaConfig || (UmbrellaConfig = {}));
 /// <reference path="./index.ts" />
+var UmbrellaPaths;
+(function (UmbrellaPaths) {
+    UmbrellaPaths.init = function () {
+        var paths = {
+            packageDir: __dirname
+        };
+        paths.temp = plugins.path.join(paths.packageDir, "temp/");
+        paths.legaldocs = plugins.path.join(paths.temp, "legaldocs-master/docs");
+        paths.buildBase = plugins.path.join(paths.packageDir, "test/");
+        return paths;
+    };
+})(UmbrellaPaths || (UmbrellaPaths = {}));
+/// <reference path="./index.ts" />
 var GulpTasks;
 (function (GulpTasks) {
     function init() {
         /**
+         * Download Task:
+         * Downloads legaldocs repo and stores it to "temp/"
+         */
+        plugins.gulp.task("download", function (cb) {
+            plugins.remotezip.get({
+                from: "https://github.com/UmbrellaZone/legaldocs/archive/master.zip",
+                toPath: plugins.path.resolve(paths.temp),
+                cb: cb
+            });
+        });
+        /**
          * Sass Task
          */
-        gulp.task("sass", function () {
+        plugins.gulp.task("sass", function () {
         });
         /**
          * Jade Task
          */
-        gulp.task("jade", function () {
-            var stream = gulp.src(config.paths.jadeBase + "*.jade")
-                .pipe(plugins.plumber())
-                .pipe(gulp.dest(config.paths.buildBase + 'jade/'));
+        plugins.gulp.task("jade", function () {
+            var stream = plugins.gulp.src(plugins.path.join(paths.packageDir, "web/jade/index.jade"))
+                .pipe(plugins.g.plumber())
+                .pipe(plugins.g.jade())
+                .pipe(plugins.gulp.dest(plugins.path.join(paths.buildBase, 'jade/')));
             return stream;
         });
         /**
          * Text Task
          */
-        gulp.task("text", function () {
+        plugins.gulp.task("text", function () {
         });
     }
     GulpTasks.init = init;
@@ -59,15 +87,16 @@ var GulpTasks;
 /// <reference path="./typings/tsd.d.ts" />
 /// <reference path="./umbrella.gulp.plugins.ts" />
 /// <reference path="./umbrella.config.ts" />
+/// <reference path="./umbrella.paths.ts" />
 /// <reference path="./umbrella.gulp.tasks.ts" />
-var gulp = require("gulp");
 var plugins = GulpPlugins.init(); //is defined in umbrella.gulp.plugins.ts
 var config = UmbrellaConfig.init();
+var paths = UmbrellaPaths.init();
 /* --------------------------------------------------------------------------
  ---------------------- run Tasks -------------------------------------------
  -------------------------------------------------------------------------- */
 GulpTasks.init();
-gulp.task("default", function (cb) {
-    plugins.sequence("jade", "text")(cb);
+plugins.gulp.task("default", function (cb) {
+    plugins.g.sequence("download", "jade")(cb);
 });
-gulp.start.apply(gulp, ['default']);
+plugins.gulp.start.apply(plugins.gulp, ['default']);
