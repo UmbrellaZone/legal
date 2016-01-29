@@ -1,6 +1,6 @@
 {
   "name": "legal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create imprints and privacy policies with ease",
   "main": "server.js",
   "license": "MIT",
