@@ -11,6 +11,6 @@ This repo contains files that are intended to be used in automated workflows lik
 Learn more about how to use this tool on https://docs.umbrella.zone
 
 ### About the authors:
-[![Project Phase](https://mediaserve.lossless.digital/lossless.de/img/createdby_github.svg)](https://lossless.com/)
+[![Project Phase](https://mediaserve.lossless.digital/lossless.com/img/createdby_github.svg)](https://lossless.com/)
 
 [![Gitter](https://img.shields.io/badge/Support%20us-PayPal-blue.svg)](https://paypal.me/lossless)
