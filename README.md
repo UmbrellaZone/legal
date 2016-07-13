@@ -2,9 +2,9 @@
 This repo contains files that are intended to be used in automated workflows like gulp or grunt.
 
 ### Buildstatus/Dependencies
-[![Build Status](https://travis-ci.org/UmbrellaZone/umbrella-legal.svg?branch=v0.0.3)](https://travis-ci.org/UmbrellaZone/umbrella-legal)
-[![Dependency Status](https://david-dm.org/umbrellazone/umbrella-legal.svg)](https://david-dm.org/umbrellazone/umbrella-legal)
-[![devDependency Status](https://david-dm.org/umbrellazone/umbrella-legal/dev-status.svg)](https://david-dm.org/umbrellazone/umbrella-legal#info=devDependencies)
+[![build status](https://gitlab.com/UmbrellaZone/legal/badges/master/build.svg)](https://gitlab.com/UmbrellaZone/legal/commits/master)
+[![Dependency Status](https://david-dm.org/umbrellazone/legal.svg)](https://david-dm.org/umbrellazone/legal)
+[![devDependency Status](https://david-dm.org/umbrellazone/legal/dev-status.svg)](https://david-dm.org/umbrellazone/legal#info=devDependencies)
 
 
 ## How to build your own legaldocs integration
