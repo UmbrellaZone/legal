@@ -15,18 +15,12 @@
   },
   "author": "Smart Coordination GmbH <office@smart-coordination.com>",
   "dependencies": {
-    "beautylog": "^2.0.2",
-    "fs-extra": "^0.26.4",
-    "gulp": "^3.9.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sequence": "^0.4.4",
-    "mojoio-material": "0.0.0",
-    "remotezip": "^1.0.4"
+    "beautylog": "^5.0.14",
+    "q": "^1.4.1",
+    "smartfile": "^4.0.12"
   },
   "devDependencies": {
     "easyserve": "0.0.5",
-    "npmts": "^1.0.9"
+    "npmts-g": "^5.2.6"
   }
 }
