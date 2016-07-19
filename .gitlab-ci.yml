@@ -28,6 +28,7 @@ testSTABLE:
 
 release:
   stage: release
+  environment: npm_registry
   script:
     - npmci publish
   only:
