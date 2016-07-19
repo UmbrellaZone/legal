@@ -1,6 +1,6 @@
 {
   "name": "legal",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "privacy policies and other legal stuff that works. TypeScript ready.",
   "main": "dist/index.js",
   "license": "MIT",
