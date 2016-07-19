@@ -1,5 +1,5 @@
 # legal
-This repo contains files that are intended to be used in automated workflows like gulp or grunt.
+privacy policies and other legal stuff that works. TypeScript ready.
 
 ### Buildstatus/Dependencies
 [![build status](https://gitlab.com/UmbrellaZone/legal/badges/master/build.svg)](https://gitlab.com/UmbrellaZone/legal/commits/master)

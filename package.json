@@ -1,8 +1,8 @@
 {
   "name": "legal",
   "version": "0.0.4",
-  "description": "Create imprints and privacy policies with ease",
-  "main": "server.js",
+  "description": "privacy policies and other legal stuff that works. TypeScript ready.",
+  "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
