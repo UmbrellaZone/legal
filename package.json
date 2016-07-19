@@ -9,9 +9,7 @@
     "url": "git://github.com/UmbrellaZone/umbrella-legal.git"
   },
   "scripts": {
-    "test": "(npmts)",
-    "testm": "(npm test) && (node test.js)",
-    "reinstall": "(rm -r node_modules && npm install)"
+    "test": "(npmts)"
   },
   "author": "Smart Coordination GmbH <office@smart-coordination.com>",
   "dependencies": {
