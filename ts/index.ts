@@ -4,5 +4,6 @@ import * as plugins from './legal.plugins'
 import { } from 'tsclass'
 
 export class Legal {
-    company
+    company: plugins.tsclass.ICompany
+    
 }

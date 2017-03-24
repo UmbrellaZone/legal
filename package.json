@@ -26,7 +26,7 @@
   "dependencies": {
     "beautylog": "^6.1.5",
     "legaldocs": "https://gitlab.com/umbrellazone/legaldocs",
-    "tsclass": "^1.0.4",
+    "tsclass": "^1.0.6",
     "typings-global": "^1.0.14"
   }
 }
