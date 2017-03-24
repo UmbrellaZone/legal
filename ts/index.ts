@@ -7,3 +7,7 @@ export class Legal {
     company: plugins.tsclass.ICompany
     
 }
+
+export let makeProvider = async () => {
+    return await plugins.legaldocs.getPrivacyPolicy()
+}
