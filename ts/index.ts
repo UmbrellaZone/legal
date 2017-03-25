@@ -4,10 +4,12 @@ import * as plugins from './legal.plugins'
 import { } from 'tsclass'
 
 export class Legal {
-    company: plugins.tsclass.ICompany
-    
+  company: plugins.tsclass.ICompany
+
 }
 
 export let makeProvider = async () => {
-    return await plugins.legaldocs.getPrivacyPolicy()
+  return {
+    privacyPolicy: await plugins.legaldocs.getPrivacyPolicy()
+  }
 }

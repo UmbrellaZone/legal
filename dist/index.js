@@ -13,6 +13,8 @@ class Legal {
 }
 exports.Legal = Legal;
 exports.makeProvider = () => __awaiter(this, void 0, void 0, function* () {
-    return yield plugins.legaldocs.getPrivacyPolicy();
+    return {
+        privacyPolicy: yield plugins.legaldocs.getPrivacyPolicy()
+    };
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsMkNBQTBDO0FBSzFDO0NBR0M7QUFIRCxzQkFHQztBQUVVLFFBQUEsWUFBWSxHQUFHO0lBQ3RCLE1BQU0sQ0FBQyxNQUFNLE9BQU8sQ0FBQyxTQUFTLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQTtBQUNyRCxDQUFDLENBQUEsQ0FBQSJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsMkNBQTBDO0FBSzFDO0NBR0M7QUFIRCxzQkFHQztBQUVVLFFBQUEsWUFBWSxHQUFHO0lBQ3hCLE1BQU0sQ0FBQztRQUNMLGFBQWEsRUFBRSxNQUFNLE9BQU8sQ0FBQyxTQUFTLENBQUMsZ0JBQWdCLEVBQUU7S0FDMUQsQ0FBQTtBQUNILENBQUMsQ0FBQSxDQUFBIn0=
