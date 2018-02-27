@@ -24,17 +24,16 @@ export class CheckResult {
 }
 
 export class LicenseChecker {
-
   async excludeLicenseWithinPath(pathArg: string, licenseArrayArg: string[]) {
     const checkResult = new CheckResult();
     const plainResultArray = await this.createPlainResultArray(pathArg);
     plainResultArray.forEach(licenseResult => {
-      if(licenseArrayArg.indexOf(licenseResult.license) === -1) {
-        checkResult.addPassing(licenseResult)
+      if (licenseArrayArg.indexOf(licenseResult.license) === -1) {
+        checkResult.addPassing(licenseResult);
       } else {
         checkResult.addFailing(licenseResult);
       }
-    })
+    });
     return checkResult;
   }
 
@@ -42,18 +41,18 @@ export class LicenseChecker {
     const checkResult = new CheckResult();
     const plainResultArray = await this.createPlainResultArray(pathArg);
     plainResultArray.forEach(licenseResult => {
-      if(licenseArrayArg.indexOf(licenseResult.license) !== -1) {
-        checkResult.addPassing(licenseResult)
+      if (licenseArrayArg.indexOf(licenseResult.license) !== -1) {
+        checkResult.addPassing(licenseResult);
       } else {
         checkResult.addFailing(licenseResult);
       }
-    })
+    });
     return checkResult;
   }
 
-  async createPlainResultArray (pathArg: string) {
+  async createPlainResultArray(pathArg: string) {
     const licenseJson = await this.getJsonForPath(pathArg);
-    const resultArray: IModuleLicenseResult[] = [] 
+    const resultArray: IModuleLicenseResult[] = [];
     for (let moduleKey in licenseJson) {
       const refObject = licenseJson[moduleKey];
       resultArray.push({
@@ -64,7 +63,7 @@ export class LicenseChecker {
         path: refObject.path,
         publisher: refObject.publisher,
         repository: refObject.repository
-      })
+      });
     }
     return resultArray;
   }
