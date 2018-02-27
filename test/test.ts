@@ -23,7 +23,6 @@ tap.test('should create an instance of legal', async () => {
 tap.test('should create instance of licenseChecker', async () => {
   const licenseChecker = await legal.createLicenseChecker();
   let plainResultArray = await licenseChecker.createPlainResultArray(process.cwd());
-  // console.log(plainResultArray)
   expect(plainResultArray).to.be.instanceof(Array);
   expect(plainResultArray[0]).to.have.property('license')
 });
@@ -31,14 +30,12 @@ tap.test('should create instance of licenseChecker', async () => {
 tap.test('should exclude certain licenses', async () => {
   const licenseChecker = await legal.createLicenseChecker();
   const checkResult = await licenseChecker.excludeLicenseWithinPath(process.cwd(), ['MIT']);
-  // console.log(checkResult.failingModules)
   expect(checkResult.failingModules.length).to.be.greaterThan(10)
 });
 
 tap.test('should include certain licenses', async () => {
   const licenseChecker = await legal.createLicenseChecker();
   const checkResult = await licenseChecker.includeLicencesWithinPath(process.cwd(), ['MIT'])
-  // console.log(checkResult.failingModules);
   expect(checkResult.failingModules.length).to.be.greaterThan(10)
 });
 
