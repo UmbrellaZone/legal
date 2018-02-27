@@ -24,9 +24,13 @@
   },
   "homepage": "https://gitlab.com/pkunz/legal#README",
   "dependencies": {
-    "beautylog": "^6.1.5",
-    "legaldocs": "https://gitlab.com/umbrellazone/legaldocs",
-    "tsclass": "^1.0.6",
-    "typings-global": "^1.0.14"
+    "beautylog": "^6.1.10",
+    "license-checker": "^16.0.0",
+    "smartq": "^1.1.6",
+    "tsclass": "^1.0.18"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "tapbundle": "^2.0.0"
   }
 }

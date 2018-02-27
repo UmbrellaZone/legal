@@ -1,10 +1,5 @@
-import 'typings-global'
-import * as beautylog from 'beautylog'
-import * as tsclass from 'tsclass'
-import * as legaldocs from 'legaldocs'
+import * as beautylog from 'beautylog';
+import * as tsclass from 'tsclass';
+import * as smartq from 'smartq';
 
-export {
-    beautylog,
-    tsclass,
-    legaldocs
-}
+export { beautylog, tsclass, smartq };

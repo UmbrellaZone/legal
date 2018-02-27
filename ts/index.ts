@@ -1,15 +1,17 @@
-import * as plugins from './legal.plugins'
+import * as plugins from './legal.plugins';
+import { ICompany } from 'tsclass';
+import * as legal from './mod.legal/classes.legal';
+import * as licenseChecker from './mod.licensechecker/classes.licensechecker';
 
-// interfces
-import { } from 'tsclass'
+export const createLicenseChecker = async () => {
+  const licenseCheckerMod = await import('./mod.licensechecker/classes.licensechecker');
+  const licenseChecker = new licenseCheckerMod.LicenseChecker();
+  return licenseChecker;
+};
 
-export class Legal {
-  company: plugins.tsclass.ICompany
-
-}
-
-export let makeProvider = async () => {
-  return {
-    privacyPolicy: await plugins.legaldocs.getPrivacyPolicy()
-  }
-}
+export const createLegal = async (companyArg: ICompany) => {
+  const legalMod = await import('./mod.legal/classes.legal');
+  return new legalMod.Legal({
+    company: companyArg
+  });
+};
