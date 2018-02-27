@@ -1,6 +1,6 @@
 {
   "name": "legal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "go legal programmatically",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
