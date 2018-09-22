@@ -1,4 +1,13 @@
-import * as tsclass from '@tsclass/tsclass';
-import * as smartpromise from '@pushrocks/smartpromise';
+// sub packages
+import * as legalDocs from '@umbrellazone/legal-docs';
+export { legalDocs }
 
-export { tsclass, smartpromise };
+// @tsclass
+import * as tsclass from '@tsclass/tsclass';
+export { tsclass }
+
+// @pushrocks
+import * as smartpromise from '@pushrocks/smartpromise';
+import * as smartmarkdown from '@pushrocks/smartmarkdown';
+import * as smartmustache from '@pushrocks/smartmustache';
+export { smartpromise, smartmarkdown, smartmustache };

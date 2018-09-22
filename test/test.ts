@@ -18,6 +18,15 @@ tap.test('should create an instance of legal', async () => {
   });
 
   expect(testLegal).to.have.property('company');
+  
+  testLegal.getPrivacyPolicyAsHtml({
+    company: testLegal.company,
+    legal: {
+      googleAdSense: true,
+      npmTracking: true,
+      serviceWorker: true
+    }
+  });
 });
 
 tap.test('should create instance of licenseChecker', async () => {

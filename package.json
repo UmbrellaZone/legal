@@ -26,8 +26,11 @@
   },
   "homepage": "https://gitlab.com/pkunz/legal#README",
   "dependencies": {
+    "@pushrocks/smartmarkdown": "^1.0.4",
+    "@pushrocks/smartmustache": "^2.0.4",
     "@pushrocks/smartpromise": "^2.0.5",
     "@tsclass/tsclass": "^2.0.0",
+    "@umbrellazone/legal-docs": "^1.0.7",
     "license-checker": "^20.2.0"
   },
   "devDependencies": {
