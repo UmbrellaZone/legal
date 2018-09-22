@@ -1,11 +1,13 @@
 {
-  "name": "legal",
+  "name": "@umbrellazone/legal",
   "version": "1.0.5",
+  "private": false,
   "description": "go legal programmatically",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "(npmts)"
+    "test": "tstest test/",
+    "build": "tsbuild"
   },
   "repository": {
     "type": "git",
@@ -24,13 +26,15 @@
   },
   "homepage": "https://gitlab.com/pkunz/legal#README",
   "dependencies": {
-    "beautylog": "^6.1.10",
-    "license-checker": "^16.0.0",
-    "smartq": "^1.1.6",
-    "tsclass": "^1.0.18"
+    "@pushrocks/smartpromise": "^2.0.5",
+    "@tsclass/tsclass": "^2.0.0",
+    "license-checker": "^20.2.0"
   },
   "devDependencies": {
-    "@types/node": "^9.4.6",
-    "tapbundle": "^2.0.0"
+    "@gitzone/tsbuild": "^2.0.22",
+    "@gitzone/tsrun": "^1.1.12",
+    "@gitzone/tstest": "^1.0.15",
+    "@pushrocks/tapbundle": "^3.0.7",
+    "@types/node": "^10.10.3"
   }
 }

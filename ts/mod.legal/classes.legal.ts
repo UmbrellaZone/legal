@@ -1,7 +1,7 @@
 import * as plugins from '../legal.plugins';
 
 // interfaces
-import { ICompany } from 'tsclass';
+import { ICompany } from '@tsclass/tsclass';
 
 export interface ILegalOptions {
   company: ICompany;

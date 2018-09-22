@@ -69,7 +69,7 @@ export class LicenseChecker {
   }
 
   private async getJsonForPath(checkPathArg) {
-    let done = plugins.smartq.defer<any>();
+    let done = plugins.smartpromise.defer<any>();
     licenseChecker.init(
       {
         start: checkPathArg

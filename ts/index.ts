@@ -1,5 +1,5 @@
 import * as plugins from './legal.plugins';
-import { ICompany } from 'tsclass';
+import { ICompany } from '@tsclass/tsclass';
 import * as legal from './mod.legal/classes.legal';
 import * as licenseChecker from './mod.licensechecker/classes.licensechecker';
 

@@ -1,5 +1,4 @@
-import * as beautylog from 'beautylog';
-import * as tsclass from 'tsclass';
-import * as smartq from 'smartq';
+import * as tsclass from '@tsclass/tsclass';
+import * as smartpromise from '@pushrocks/smartpromise';
 
-export { beautylog, tsclass, smartq };
+export { tsclass, smartpromise };
