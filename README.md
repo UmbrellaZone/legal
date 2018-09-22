@@ -25,6 +25,8 @@ go legal programmatically
 
 Use TypeScript for best in class instellisense.
 
+legal implements classes that are designed to 
+
 For further information read the linked docs at the top of this README.
 
 > MIT licensed | **&copy;** [Lossless GmbH](https://lossless.gmbh)
