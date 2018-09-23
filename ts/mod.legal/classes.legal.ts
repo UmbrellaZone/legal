@@ -18,6 +18,6 @@ export class Legal {
     const privacyPolicyTemplateString = await plugins.legalDocs.getPrivacyPolicy();
     const smartmustache = new plugins.smartmustache.SmartMustache(privacyPolicyTemplateString);
     const appliedMarkdown = smartmustache.applyData(optionsArg);
-    plugins.smartmarkdown.markdownToHtml(appliedMarkdown);
+    return plugins.smartmarkdown.markdownToHtml(appliedMarkdown);
   }
 }
