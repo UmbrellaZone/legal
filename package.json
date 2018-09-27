@@ -1,6 +1,6 @@
 {
   "name": "@umbrellazone/legal",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "private": false,
   "description": "go legal programmatically",
   "main": "dist/index.js",
@@ -30,7 +30,7 @@
     "@pushrocks/smartmustache": "^2.0.4",
     "@pushrocks/smartpromise": "^2.0.5",
     "@tsclass/tsclass": "^2.0.0",
-    "@umbrellazone/legal-docs": "^1.0.9",
+    "@umbrellazone/legal-docs": "^1.0.10",
     "license-checker": "^20.2.0"
   },
   "devDependencies": {
@@ -38,6 +38,6 @@
     "@gitzone/tsrun": "^1.1.12",
     "@gitzone/tstest": "^1.0.15",
     "@pushrocks/tapbundle": "^3.0.7",
-    "@types/node": "^10.10.3"
+    "@types/node": "^10.11.0"
   }
 }

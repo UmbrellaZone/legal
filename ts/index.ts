@@ -1,12 +1,9 @@
 import * as plugins from './legal.plugins';
 import { ICompany } from '@tsclass/tsclass';
-import * as legal from './mod.legal/classes.legal';
-import * as licenseChecker from './mod.licensechecker/classes.licensechecker';
 
 export const createLicenseChecker = async () => {
   const licenseCheckerMod = await import('./mod.licensechecker/classes.licensechecker');
-  const licenseChecker = new licenseCheckerMod.LicenseChecker();
-  return licenseChecker;
+  return new licenseCheckerMod.LicenseChecker();
 };
 
 export const createLegal = async (companyArg: ICompany) => {

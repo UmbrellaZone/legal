@@ -25,7 +25,8 @@ tap.test('should create an instance of legal', async () => {
       googleAdSense: true,
       npmTracking: true,
       serviceWorker: true
-    }
+    },
+    changesUrl: 'https://lossless.gmbh/privacy'
   });
 });
 
