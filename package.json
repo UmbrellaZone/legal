@@ -26,18 +26,18 @@
   },
   "homepage": "https://gitlab.com/pkunz/legal#README",
   "dependencies": {
-    "@pushrocks/smartmarkdown": "^1.0.4",
-    "@pushrocks/smartmustache": "^2.0.4",
-    "@pushrocks/smartpromise": "^2.0.5",
+    "@pushrocks/smartmarkdown": "^1.0.6",
+    "@pushrocks/smartmustache": "^2.0.7",
+    "@pushrocks/smartpromise": "^3.0.2",
     "@tsclass/tsclass": "^2.0.0",
     "@umbrellazone/legal-docs": "^1.0.12",
-    "license-checker": "^24.0.1"
+    "license-checker": "^25.0.1"
   },
   "devDependencies": {
-    "@gitzone/tsbuild": "^2.0.22",
-    "@gitzone/tsrun": "^1.1.13",
-    "@gitzone/tstest": "^1.0.15",
-    "@pushrocks/tapbundle": "^3.0.7",
-    "@types/node": "^10.12.0"
+    "@gitzone/tsbuild": "^2.1.11",
+    "@gitzone/tsrun": "^1.2.6",
+    "@gitzone/tstest": "^1.0.20",
+    "@pushrocks/tapbundle": "^3.0.9",
+    "@types/node": "^12.0.0"
   }
 }
