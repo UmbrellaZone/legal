@@ -2,5 +2,15 @@
   "npmci": {
     "npmGlobalTools": [],
     "npmAccessLevel": "public"
+  },
+  "gitzone": {
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "umbrellazone",
+      "gitrepo": "legal",
+      "shortDescription": "go legal programmatically",
+      "npmPackagename": "@umbrellazone/legal",
+      "license": "MIT"
+    }
   }
 }

@@ -18,7 +18,7 @@ tap.test('should create an instance of legal', async () => {
   });
 
   expect(testLegal).to.have.property('company');
-  
+
   testLegal.getPrivacyPolicyAsHtml({
     company: testLegal.company,
     legal: {

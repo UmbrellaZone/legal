@@ -2,7 +2,7 @@ import * as plugins from '../legal.plugins';
 
 // interfaces
 import { ICompany } from '@tsclass/tsclass';
-import { IExpectedTemplateData } from '@umbrellazone/legal-docs'
+import { IExpectedTemplateData } from '@umbrellazone/legal-docs';
 
 export interface ILegalOptions {
   company: ICompany;

@@ -1,10 +1,10 @@
 // sub packages
 import * as legalDocs from '@umbrellazone/legal-docs';
-export { legalDocs }
+export { legalDocs };
 
 // @tsclass
 import * as tsclass from '@tsclass/tsclass';
-export { tsclass }
+export { tsclass };
 
 // @pushrocks
 import * as smartpromise from '@pushrocks/smartpromise';

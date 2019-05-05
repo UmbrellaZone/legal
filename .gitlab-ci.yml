@@ -37,18 +37,6 @@ snyk:
 # ====================
 # test stage
 # ====================
-testLEGACY:
-  stage: test
-  script:
-  - npmci npm prepare
-  - npmci node install legacy
-  - npmci npm install
-  - npmci npm test
-  coverage: /\d+.?\d+?\%\s*coverage/
-  tags:
-  - docker
-  - notpriv
-  allow_failure: true
 
 testLTS:
   stage: test
@@ -134,14 +122,4 @@ pages:
     expire_in: 1 week
     paths:
     - public
-  allow_failure: true
-
-windowsCompatibility:
-  image: stefanscherer/node-windows:10-build-tools
-  stage: metadata
-  script:
-  - npm install & npm test
-  coverage: /\d+.?\d+?\%\s*coverage/
-  tags:
-  - windows
   allow_failure: true
