@@ -26,7 +26,7 @@
   },
   "homepage": "https://gitlab.com/pkunz/legal#README",
   "dependencies": {
-    "@pushrocks/smartmarkdown": "^1.0.6",
+    "@pushrocks/smartmarkdown": "^2.0.2",
     "@pushrocks/smartmustache": "^2.0.7",
     "@pushrocks/smartpromise": "^3.0.2",
     "@tsclass/tsclass": "^2.0.0",
@@ -36,8 +36,18 @@
   "devDependencies": {
     "@gitzone/tsbuild": "^2.1.11",
     "@gitzone/tsrun": "^1.2.6",
-    "@gitzone/tstest": "^1.0.20",
-    "@pushrocks/tapbundle": "^3.0.9",
-    "@types/node": "^12.0.0"
-  }
+    "@gitzone/tstest": "^1.0.24",
+    "@pushrocks/tapbundle": "^3.0.11",
+    "@types/node": "^12.0.12"
+  },
+  "files": [
+    "ts/*",
+    "ts_web/*",
+    "dist/*",
+    "dist_web/*",
+    "assets/*",
+    "cli.js",
+    "npmextra.json",
+    "readme.md"
+  ]
 }

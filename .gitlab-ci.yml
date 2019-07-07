@@ -1,5 +1,5 @@
-# gitzone standard
-image: hosttoday/ht-docker-node:npmci
+# gitzone ci_default
+image: registry.gitlab.com/hosttoday/ht-docker-node:npmci
 
 cache:
   paths:
@@ -49,23 +49,11 @@ testLTS:
   tags:
   - docker
   - notpriv
-    
-testSTABLE:
-  stage: test
-  script:
-  - npmci npm prepare
-  - npmci node install stable
-  - npmci npm install
-  - npmci npm test
-  coverage: /\d+.?\d+?\%\s*coverage/
-  tags:
-  - docker
-  - notpriv
 
 release:
   stage: release
   script:
-  - npmci node install stable
+  - npmci node install lts
   - npmci npm publish
   only:
   - tags
@@ -78,19 +66,11 @@ release:
 # ====================
 codequality:
   stage: metadata
-  image: docker:stable
   allow_failure: true
-  services:
-    - docker:stable-dind
   script:
-    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - docker run
-        --env SOURCE_CODE="$PWD"
-        --volume "$PWD":/code
-        --volume /var/run/docker.sock:/var/run/docker.sock
-        "registry.gitlab.com/gitlab-org/security-products/codequality:$SP_VERSION" /code
-  artifacts:
-    paths: [codeclimate.json]
+    - npmci command npm install -g tslint typescript
+    - npmci npm install
+    - npmci command "tslint -c tslint.json ./ts/**/*.ts"
   tags:
   - docker
   - priv
@@ -109,10 +89,10 @@ pages:
   image: hosttoday/ht-docker-node:npmci
   stage: metadata
   script:
-    - npmci command npm install -g typedoc typescript
+    - npmci command npm install -g @gitzone/tsdoc
     - npmci npm prepare
     - npmci npm install
-    - npmci command typedoc --module "commonjs" --target "ES2016" --out public/ ts/
+    - npmci command tsdoc
   tags:
     - docker
     - notpriv

@@ -14,10 +14,11 @@ export class Legal {
     this.company = optionsArg.company;
   }
 
-  async getPrivacyPolicyAsHtml(optionsArg: IExpectedTemplateData) {
+  async getPrivacyPolicyAsHtml(optionsArg: IExpectedTemplateData): Promise<string> {
     const privacyPolicyTemplateString = await plugins.legalDocs.getPrivacyPolicy();
     const smartmustache = new plugins.smartmustache.SmartMustache(privacyPolicyTemplateString);
     const appliedMarkdown = smartmustache.applyData(optionsArg);
-    return plugins.smartmarkdown.markdownToHtml(appliedMarkdown);
+    const smartmarkdownInstance = new plugins.smartmarkdown.SmartMarkdown();
+    return smartmarkdownInstance.markdownToHtml(appliedMarkdown);
   }
 }
