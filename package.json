@@ -38,7 +38,9 @@
     "@gitzone/tsrun": "^1.2.6",
     "@gitzone/tstest": "^1.0.24",
     "@pushrocks/tapbundle": "^3.0.11",
-    "@types/node": "^12.0.12"
+    "@types/node": "^12.0.12",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0"
   },
   "files": [
     "ts/*",
