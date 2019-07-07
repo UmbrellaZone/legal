@@ -1,6 +1,6 @@
 {
   "name": "@umbrellazone/legal",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "private": false,
   "description": "go legal programmatically",
   "main": "dist/index.js",
